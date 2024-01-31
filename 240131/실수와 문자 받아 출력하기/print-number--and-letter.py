@@ -2,4 +2,4 @@ a = input()
 b = float(input())
 c = float(input())
 
-print(a, b, c, sep = "\n")
+print(a, f"{b:.2f}", f"{c:.2f}", sep = "\n")
