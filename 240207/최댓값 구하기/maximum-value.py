@@ -8,5 +8,7 @@ if b >= a :
         max =b
     else :
         max =c
-
+elif c >= a :
+    max = c
+    
 print(max)
