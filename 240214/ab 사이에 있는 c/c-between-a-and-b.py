@@ -11,4 +11,4 @@ for i in range(a, b+1) :
 if isTrue :
     print("YES")
 else :
-    print("No")
+    print("NO")
