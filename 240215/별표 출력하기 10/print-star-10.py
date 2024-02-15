@@ -5,6 +5,6 @@ for i in range(2*n) :
         for _ in range(i//2+1) :
             print("*", end = " ")
     else :
-        for _ in range((n-i)//2+3) :
+        for _ in range(n - ((i//2))) :
             print("*", end = " ")
     print()
