@@ -1,6 +1,7 @@
 arr = list(map(int, input().split()))
 
-idx = len(arr)
+idx = len(arr)-1
+
 for i in range(len(arr)) :
     if arr[i] == 0 :
         idx = i
