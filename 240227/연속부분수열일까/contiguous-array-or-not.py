@@ -25,6 +25,7 @@ else :
                 tf = "No"
                 break
 
+            idx += 1
             tf = "Yes"
         
         if tf == "Yes" :
