@@ -12,13 +12,12 @@ for i, elem in enumerate(arrA) :
 
 if len(firstIdx) == 0 :
     tf = "No"
-
 else :
     for elem in firstIdx :
         idx = elem
 
         for elemB in arrB :
-            if idx + 1 > len(arrA) - 1 :
+            if idx + 1 > len(arrA) :
                 tf = "No"
                 break 
 
