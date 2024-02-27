@@ -21,7 +21,7 @@ else :
                 tf = "No"
                 break 
 
-            if arrA[idx+1] != elemB :
+            if arrA[idx] != elemB :
                 tf = "No"
                 break
 
