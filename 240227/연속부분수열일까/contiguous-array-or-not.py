@@ -6,8 +6,10 @@ arrB = list(map(int, input().split()))
 idx = -1
 tf = "Yes"
 for elem in arrB :
+
     if elem in arrA :
         temp = arrA.index(elem)
+        arrA[temp] = -1
     else :
         tf = "No"
         break
