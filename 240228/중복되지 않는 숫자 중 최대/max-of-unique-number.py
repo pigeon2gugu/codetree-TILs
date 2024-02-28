@@ -1,16 +1,19 @@
 n = int(input())
 arr = list(map(int, input().split()))
-newArr = [arr[0]]
+newArr = set(arr)
+answerArr = []
 
-for elem in arr[1::] :
+for elem in newArr :
+    cnt = 0
 
-    if elem in newArr :
-        newArr.pop(newArr.index(elem))
-        continue
+    for elem2 in arr :
+        if elem2 == elem :
+            cnt += 1
 
-    newArr.append(elem)
+    if cnt == 1 :
+        answerArr.append(elem)
 
-if len(newArr) == 0 :
+if len(answerArr) == 0 :
     print(-1)
 else :
-    print(max(newArr))
+    print(max(answerArr))
