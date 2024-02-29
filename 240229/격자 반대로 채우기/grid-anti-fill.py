@@ -3,7 +3,7 @@ arr = [[0 for _ in range(n)] for _ in range(n)]
 
 num = 1
 for col in range(n-1, -1, -1) :
-    if col % 2 != 0 :
+    if ((n-1) - col) % 2 == 0 :
         for row in range(n-1, -1, -1) :
             arr[row][col] = num
             num += 1
