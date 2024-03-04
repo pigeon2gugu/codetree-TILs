@@ -12,7 +12,10 @@ for elem in s[1:] :
         beforeElem.append(elem)
         cnts.append(1)
 
-print((idx+1)*2)
+answer = ""
 for i in range(idx+1) :
-    print(beforeElem[i], end = "")
-    print(cnts[i], end = "")
+    answer += beforeElem[i]
+    answer += str(cnts[i])
+
+print(len(answer))
+print(answer)
