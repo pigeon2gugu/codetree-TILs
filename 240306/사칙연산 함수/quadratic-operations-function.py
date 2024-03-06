@@ -19,7 +19,7 @@ def calculator(a, o, c) :
 
     expression = f"{a} {o} {c} = "
     if o == "+" :
-        return expression + str(ddCalculator(a, c))
+        return expression + str(addCalculator(a, c))
     elif o == "-" :
         return expression + str(diffCalculator(a, c))
     elif o == "*" :
