@@ -6,8 +6,8 @@ def hasDateInMonth(m, d) :
     if m > 12 or d > 31 :
         return False
 
-    if m == 2 and d <= 28:
-        return True
+    if m == 2 and d > 28:
+        return False
 
     if m in day31Month :
         if d <= 31 :
