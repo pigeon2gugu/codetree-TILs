@@ -7,7 +7,7 @@ def hasDuplicateAlpha(string) :
 
     temp = string[0]
     cnt = 1
-    for i in range(1, len(string)-1) :
+    for i in range(1, len(string)) :
         print(string[i:])
         if temp not in string[i:] :
             cnt += 1
