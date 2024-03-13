@@ -14,7 +14,7 @@ idx = 0
 
 for i in range(1, len(spys)) :
     if spys[i].score < minScore :
-        minScore = spys.score
+        minScore = spys[i].score
         idx = i
 
 print(spys[idx].codeName + " " + str(spys[idx].score))
