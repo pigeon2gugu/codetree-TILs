@@ -10,7 +10,7 @@ def getDate(m, d) :
 
 cnt = (getDate(m2, d2) - getDate(m1, d1)) // 7
 
-if days[(getDate(m2, d2) - getDate(m1, d1)) % 7] == day :
+if (getDate(m2, d2) - getDate(m1, d1)) % 7 >= days.index(day) :
     cnt += 1
 
 
