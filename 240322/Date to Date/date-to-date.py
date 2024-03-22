@@ -5,4 +5,9 @@ dayOfMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 m1Date = sum(dayOfMonth[:m1]) + d1
 m2Date = sum(dayOfMonth[:m2]) + d2
 
-print(m2Date - m1Date)
+diffDate = m2Date - m1Date
+
+if diffDate == 0 :
+    print(1)
+else :
+    print(diffDate)
