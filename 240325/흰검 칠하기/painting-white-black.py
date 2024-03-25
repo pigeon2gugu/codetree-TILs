@@ -13,13 +13,13 @@ for s in stmts :
         for i in range(start, start + int(s[0])) :
             colors[i] = 1
             cntB[i] += 1
-        start += int(s[0])
+        start = start + int(s[0]) - 1
     
     elif s[1] == "L" :
-        for i in range(start - int(s[0]), start) :
+        for i in range(start - int(s[0]) + 1, start + 1) :
             colors[i] = -1
             cntW[i] += 1
-        start -= int(s[0])
+        start = start - int(s[0]) + 1
 
 
 cnt1, cnt2, cnt3 = 0, 0, 0
