@@ -10,12 +10,13 @@ for i, (x1, y1, x2, y2) in enumerate(rects, start = 1) :
     for x in range(x1, x2) :
         for y in range(y1, y2) :
             area[x][y] = i
-
+            
 minX = maxL
 maxX = -maxL
 minY = maxL
 maxY = -maxL
 
+cnt = 0
 for x in range(maxL) :
     for y in range(maxL) :
         if area[x][y] == 1 :
@@ -23,5 +24,9 @@ for x in range(maxL) :
             maxX = max(maxX, x)
             minY = min(minY, y)
             maxY = max(maxY, y)
+            cnt += 1
 
-print((maxX - minX + 1) * (maxY - minY + 1))
+if cnt == 0 :
+    print(0)
+else :
+    print((maxX - minX + 1) * (maxY - minY + 1))
