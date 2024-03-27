@@ -6,7 +6,7 @@ area = [[0] * maxL for _ in range(maxL)]
 
 for i, (x1, y1, x2, y2) in enumerate(rects, start = 1) :
     x1, y1, x2, y2 = x1 + offset, y1 + offset, x2 + offset, y2 + offset
-    
+
     for x in range(x1, x2) :
         for y in range(y1, y2) :
             area[x][y] = i
@@ -19,15 +19,14 @@ maxY = -offset
 for x in range(maxL) :
     for y in range(maxL) :
         if area[x][y] == 1 :
-            if x < minX :
+            if x <= minX :
                 minX = x
-            elif x > maxX :
+            elif x >= maxX :
                 maxX = x
             
-            if y < minY :
+            if y <= minY :
                 minY = y
-            elif y > maxY :
+            elif y >= maxY :
                 maxY = y
 
-
-print((maxX - minX - 1) * (maxY - minY ))
+print((maxX - (minX + 1)) * (maxY - (minY)))
