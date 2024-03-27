@@ -29,4 +29,5 @@ for x in range(maxL) :
             elif y >= maxY :
                 maxY = y
 
+print(maxX, minX, maxY, minY)
 print((maxX - (minX + 1)) * (maxY - (minY)))
