@@ -13,7 +13,6 @@ for i in range(len(a)) :
             arrA[timeA+1] = arrA[timeA] - 1
         elif a[i][0] == "R" :
             arrA[timeA+1] = arrA[timeA] + 1
-        print(arrA[timeA+1])
         timeA += 1
 
 timeB = 0
