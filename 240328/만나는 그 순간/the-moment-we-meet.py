@@ -1,7 +1,7 @@
 n, m = tuple(map(int, input().split()))
 a = [tuple(input().split()) for _ in range(n)]
 b = [tuple(input().split()) for _ in range(m)]
-maxT = 1000 + 1
+maxT = 1000 * 1000 + 1
 arrA = [0] * maxT
 arrB = [0] * maxT
 
