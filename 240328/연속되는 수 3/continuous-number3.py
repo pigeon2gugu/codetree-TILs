@@ -10,4 +10,5 @@ for i in range(1, n) :
         ans = max(ans, cnt)
         cnt = 1
 
+ans = max(ans,cnt)
 print(ans)
