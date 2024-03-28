@@ -10,7 +10,5 @@ for i in range(1, n) :
         cnts.append(cnt)
         cnt = 1
 
-if len(cnts) == 0 :
-    print(1)
-else :
-    print(max(cnts))
+cnts.append(cnt)
+print(max(cnts))
