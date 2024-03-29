@@ -1,4 +1,4 @@
-maxL = 100000 + 1
+maxL = 50000 * 100000 + 1
 n, m = tuple(map(int, input().split()))
 a = [tuple(input().split()) for _ in range(n)]
 b = [tuple(input().split()) for _ in range(m)]
@@ -33,7 +33,7 @@ for i in range(1, maxT) :
 
     dA1 = disA[i-1] if timeA > i - 1 else disA[timeA-1]
     dB1 = disB[i-1] if timeB > i - 1 else disB[timeB-1]
-    
+
     if dA1 != dB1 and dA == dB :
         cnt += 1
 
