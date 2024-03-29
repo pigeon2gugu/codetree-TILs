@@ -10,11 +10,11 @@ arr.sort(key = lambda x : x[0])
 
 for _ , (time, x, y) in enumerate(arr) :
 
-    if attacked[x] == 1 and cnts[x] < p :
+    if attacked[x] == 1 and cnts[x] < k :
         cnts[x] += 1
         attacked[y] = 1
 
-    if attacked[y] == 1 and cnts[y] < p :
+    if attacked[y] == 1 and cnts[y] < k :
         cnts[y] += 1
         attacked[x] = 1
 
