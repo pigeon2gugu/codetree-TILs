@@ -14,7 +14,7 @@ for _ , (time, x, y) in enumerate(arr) :
         cnts[x] += 1
         attacked[y] = 1
 
-    if attacked[y] == 1 and cnts[y] < k :
+    if attacked[y] == 1 and cnts[y] < k and cnts[y] > 0:
         cnts[y] += 1
         attacked[x] = 1
 
