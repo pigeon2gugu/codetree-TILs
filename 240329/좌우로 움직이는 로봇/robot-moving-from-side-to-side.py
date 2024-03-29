@@ -1,4 +1,4 @@
-maxL = 50000 * 100000 + 1
+maxL = 1000000 + 1
 n, m = tuple(map(int, input().split()))
 a = [tuple(input().split()) for _ in range(n)]
 b = [tuple(input().split()) for _ in range(m)]
