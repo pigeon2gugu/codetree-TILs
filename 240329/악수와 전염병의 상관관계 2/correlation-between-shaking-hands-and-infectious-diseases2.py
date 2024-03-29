@@ -8,11 +8,11 @@ arr.sort(key = lambda x : x[0])
 cnt = 0
 for _ , (time, x, y) in enumerate(arr) :
 
-    if x == p or y == p :
-        cnt += 1
+    if cnt >= k :
+        break
 
-        if cnt > k :
-            break
+    if x == p or y == p and cnt < k:
+        cnt += 1
 
         attacked[x] = 1
         attacked[y] = 1
