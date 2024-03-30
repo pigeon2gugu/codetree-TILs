@@ -18,8 +18,10 @@ for _, (v, t) in enumerate(b) :
         timeB += 1
 
 cnt = 0
-for i in range(1, timeA - 1) :
+for i in range(1, timeA) :
     if (dA[i + 1] - dB[i + 1]) * (dA[i] - dB[i]) <= 0 :
+        if (dA[i + 1] - dB[i + 1]) == 0 and (dA[i] - dB[i]) == 0 :
+            continue
         cnt += 1
 
 
