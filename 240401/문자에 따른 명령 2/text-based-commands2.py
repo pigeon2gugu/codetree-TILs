@@ -10,7 +10,7 @@ for ll in l :
     if ll == 'R' :
         direction += 1
     elif ll == 'L' :
-        direction -= 1
+        direction = direction -1 + 4
     elif ll == 'F' :
         distance += 1
 
