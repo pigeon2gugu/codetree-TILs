@@ -12,17 +12,17 @@ def inRange(x, y) :
     return x >= 0 and x < n and y >= 0 and y < n
 
 d = directions[d]
-nx, ny = x, y
 
-for tt in range(t) :
+for tt in range(t):
+    nx = x + dx[d]
+    ny = y + dy[d]
 
-    nx = nx + dx[d]
-    ny = ny + dy[d]
+    if not inRange(nx, ny):
+        d = (3 - d) % 4  # 벽에 부딪혔을 때 방향을 반대로 변경
+        nx = x + dx[d]
+        ny = y + dy[d]
 
-    if not inRange(nx, ny) :
-        d = (3 - d) % 4
-        nx = nx + dx[d]
-        ny = ny + dy[d]
+    if inRange(nx, ny):
+        x, y = nx, ny
 
-
-print(ny + 1, nx + 1)
+print(y + 1, x)
