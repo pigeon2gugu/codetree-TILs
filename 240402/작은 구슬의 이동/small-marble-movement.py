@@ -20,7 +20,7 @@ for tt in range(t) :
     ny = ny + dy[d]
 
     if not inRange(nx, ny) :
-        d = 3 - d
+        d = (3 - d) % 4
         nx = nx + dx[d]
         ny = ny + dy[d]
 
