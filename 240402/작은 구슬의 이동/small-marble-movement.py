@@ -14,13 +14,15 @@ def inRange(x, y) :
 d = directions[d]
 nx, ny = x, y
 
-for tt in range(t + 1) :
-
-    if not inRange(nx, ny) :
-        d = 3 - d
+for tt in range(t) :
 
     nx = nx + dx[d]
     ny = ny + dy[d]
+
+    if not inRange(nx, ny) :
+        d = 3 - d
+        nx = nx + dx[d]
+        ny = ny + dy[d]
 
 
 print(ny + 1, nx + 1)
