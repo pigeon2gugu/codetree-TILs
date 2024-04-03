@@ -21,7 +21,7 @@ for i in range(1, n * m + 1) :
     r = r + dr[direction]
     c = c + dc[direction]
 
-for i in range(m) :
-    for j in range(n) :
+for i in range(n) :
+    for j in range(m) :
         print(answer[i][j], end = " ")
     print()
