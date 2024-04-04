@@ -1,5 +1,5 @@
 # \ : u -> l, l -> u, d -> r, r -> d
-# / : d -> l, l -> u, u -> r, r -> d
+# / : d -> l, l -> d, u -> r, r -> u
 
 n = int(input())
 pattern = [input() for _ in range(n)]
@@ -30,7 +30,6 @@ def getStart(num):
 
     return (x, y, direction)
 
-
 x, y, direction = getStart(start)
 
 def inRange(x, y) :
@@ -41,7 +40,10 @@ while inRange(x, y) :
     ans += 1
 
     if arr[x][y] == '/' :
-        direction = (direction + 1) % 4
+        if direction % 2 == 0 :
+            direction = (direction + 1) % 4
+        else :
+            direction = (direction - 1) % 4
         
     elif arr[x][y] == '\\' :
         if direction % 2 == 0 :
