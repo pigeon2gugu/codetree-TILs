@@ -16,9 +16,9 @@ def getStart(num):
         x = 0
         direction = 0
     elif num // (n + 1) == 1:
-        x = n - 1
-        y = (num - n) % (n + 1) - 1
-        direction = 3
+        x = (num - n) % (n + 1) - 1
+        y = n - 1
+        direction = 1
     elif num // (n + 1) == 2:
         y = n - ((num - 2 * n) % (n + 1))
         x = n - 1
@@ -26,7 +26,7 @@ def getStart(num):
     elif num // (n + 1) == 3:
         x = n - ((num - 3 * n) % (n + 1))
         y = 0
-        direction = 1
+        direction = 3
 
     return (x, y, direction)
 
