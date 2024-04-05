@@ -10,13 +10,9 @@ def inRange(x, y) :
     return x >= 0 and x < n and y >= 0 and y < m
 
 num = ord('A')
-for i in range(num, num + (n * m)) :
+for i in range(n * m) :
 
-    newNum = i
-    if newNum > ord('Z') :
-        newNum -= (ord('Z') - ord('A'))
-
-    answer[x][y] = chr(newNum)
+    answer[x][y] = chr(num)
 
     nx = x + dxs[direction]
     ny = y + dys[direction]
@@ -26,6 +22,11 @@ for i in range(num, num + (n * m)) :
     
     x = x + dxs[direction]
     y = y + dys[direction]
+
+    if num > ord('Z') :
+        num = ord('A')
+    else :
+        num += 1
 
 for x in range(n) :
     for y in range(m) :
