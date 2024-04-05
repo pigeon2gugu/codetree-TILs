@@ -23,7 +23,7 @@ for i in range(n * m) :
     x = x + dxs[direction]
     y = y + dys[direction]
 
-    if num > ord('Z') :
+    if num >= ord('Z') :
         num = ord('A')
     else :
         num += 1
