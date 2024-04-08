@@ -11,7 +11,7 @@ for i in range(1, r-1) :
         if arr[i][j] != start :
             for k in range(i+1, r - 1) :
                 for l in range(j+1, c - 1) :
-                    if arr[k][l] != end :
+                    if arr[k][l] != end and arr[k][l] != arr[i][j] :
                         cnt+=1
 
 print(cnt)
