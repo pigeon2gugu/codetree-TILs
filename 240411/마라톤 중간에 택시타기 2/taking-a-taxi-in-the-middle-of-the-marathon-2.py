@@ -9,7 +9,7 @@ x, y = tuple(points[0])
 for i in range(1, n-1) :
     distance = 0
     tempX, tempY = tuple(points[i])
-    points[i] = (x, y)
+    points[i] = points[i-1]
     for j in range(n-1) :
         distance += abs(points[j][0] - points[j+1][0]) + abs(points[j][1] - points[j+1][1])
 
