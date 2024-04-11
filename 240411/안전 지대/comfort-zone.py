@@ -34,4 +34,4 @@ for h in range(1, maxHeight + 1):
 maxCount = max(areas)
 maxIndex = areas.index(maxCount) + 1
 
-print(maxCount, maxIndex)
+print(maxIndex, maxCount)
