@@ -16,8 +16,8 @@ def dfs(vertex) :
 
 dfs(1)
 
-cnt = 0
-for v in visited :
-    cnt += 1
+for idx, v in enumerate(visited) :
+    if v and idx != 1 :
+        cnt += 1
 
-print(cnt - 1)
+print(cnt)
