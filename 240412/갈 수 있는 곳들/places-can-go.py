@@ -1,4 +1,7 @@
 from collections import deque
+import sys
+
+sys.recursionlimit(10000)
 
 n, k = tuple(map(int, input().split()))
 graph = [list(map(int, input().split())) for _ in range(n)]
