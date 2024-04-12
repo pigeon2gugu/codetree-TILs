@@ -4,7 +4,7 @@ n, k = tuple(map(int, input().split()))
 graph = [list(map(int, input().split())) for _ in range(n)]
 points = [tuple(map(int, input().split())) for _ in range(k)] 
 visited = [[False for _ in range(n)] for _ in range(n)]
-cnt = 1
+cnt = 0
 
 q = deque()
 
@@ -16,7 +16,6 @@ def canMove(x, y) :
 
 def bfs() :
     global cnt
-
     while q :
         x, y = q.popleft()
         visited[x][y] = True
@@ -31,7 +30,12 @@ def bfs() :
 
 
 for i in range(len(points)) :
-    q.append((points[i][0]-1, points[i][1]-1))
+    x, y = points[i][0]-1, points[i][1]-1
+
+    if not visited[x][y] :
+        cnt += 1
+
+    q.append((x, y))
     bfs()
 
 print(cnt)
