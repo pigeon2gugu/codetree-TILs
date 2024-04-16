@@ -6,7 +6,7 @@ for i in range(len(nums) - 1) :
 
     temp = int(nums[i])
     cnt = 0
-    
+
     for j in range(i + 1, len(nums)) :
         isCarry = False
         
@@ -19,7 +19,7 @@ for i in range(len(nums) - 1) :
             temp += int(nums[j])
             cnt += 1
 
-    if cnt > 0 :
+    if cnt >= 2 :
         maxNum = max(maxNum, temp)
 
 if maxNum == 0 :
