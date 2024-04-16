@@ -3,29 +3,28 @@ nums = [input() for _ in range(n)]
 
 maxNum = 0
 for i in range(len(nums) - 2) :
-
-    temp = int(nums[i])
-    cnt = 0
-
     for j in range(i + 1, len(nums) - 1) :
-        isCarry = False
-        
-        for k in range(min(len(str(temp)), len(nums[j]))) :
-            if int(str(temp)[len(str(temp)) - k - 1]) + int(nums[j][len(nums[j]) - k - 1]) > 9 :
-                isCarry = True
-                break
-        
-        if not isCarry :
-            temp += int(nums[j])
-            for k in range(j + 1, len(nums)) :
-                isCarry = False
-                for l in range(min(len(str(temp)), len(nums[k]))) :
-                    if int(str(temp)[len(str(temp)) - l - 1]) + int(nums[k][len(nums[k]) - l - 1]) > 9 :
-                        isCarry = True
-                        break
+        for k in range(j + 1, len(nums)) :
+            maxL = max(len(nums[i]), len(nums[j]), len(nums[k]))
+            tempMax = str(max(int(nums[i]), int(nums[j]), int(nums[k])))
+            isCarry = False
 
-                if not isCarry :
-                    maxNum = max(temp + int(nums[k]), maxNum)
+            if len(nums[i]) < maxL :
+                nums[i] = '0' * (maxL - len(nums[i])) + nums[i]
+
+            if len(nums[j]) < maxL :
+                nums[j] = '0' * (maxL - len(nums[j])) + nums[j]
+            
+            if len(nums[k]) < maxL :
+                nums[k] = '0' * (maxL - len(nums[k])) + nums[k]
+
+            for l in range(maxL) :
+                if int(nums[i][l]) + int(nums[j][l]) + int(nums[k][l]) > 9 :
+                    isCarry = True
+                    break
+
+            if not isCarry :
+                maxNum = max(maxNum, int(nums[i]) + int(nums[j]) + int(nums[k]))
 
 
 if maxNum == 0 :
