@@ -19,7 +19,7 @@ for i in range(len(nums) - 1) :
             temp += int(nums[j])
             cnt += 1
 
-    if cnt >= 2 :
+    if cnt == 2 :
         maxNum = max(maxNum, temp)
 
 if maxNum == 0 :
