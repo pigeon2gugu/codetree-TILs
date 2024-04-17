@@ -5,8 +5,8 @@ winner = 0
 x = 0
 y = 0
 hasWinner = False
-for i in range(2, length - 2) :
-    for j in range(2, length - 2) :
+for i in range(length) :
+    for j in range(length) :
 
         if s[i][j] == 0 :
             continue
