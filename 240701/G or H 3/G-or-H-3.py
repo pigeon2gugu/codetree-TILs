@@ -1,5 +1,5 @@
 n, k = map(int, input().split())
-pictures = [0] * 10000
+pictures = [0] * 10001
 maxSum = 0
 
 for _ in range(n) :
