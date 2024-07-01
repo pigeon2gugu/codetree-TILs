@@ -3,12 +3,19 @@ import sys
 n, s = map(int, input().split())
 arr = list(map(int, input().split()))
 
-minSum = sys.maxsize
+min_diff = sys.maxsize
 
-for i in range(n-3) :
-    for j in range(i+1, n-2) :
-        for k in range(j+1, n-1) :
-            for l in range(k+1, n) :
-                minSum = min(minSum, abs(s - (arr[i] + arr[j] + arr[k] + arr[l])))
+def find_min_diff(arr, n, s, selected, start):
+    global min_diff
+    if len(selected) == n-2:
+        current_sum = sum(selected)
+        current_diff = abs(s - current_sum)
+        min_diff = min(min_diff, current_diff)
+        return
 
-print(minSum)
+    for i in range(start, len(arr)):
+        find_min_diff(arr, n, s, selected + [arr[i]], i + 1)
+
+find_min_diff(arr, n, s, [], 0)
+
+print(min_diff)
