@@ -1,4 +1,5 @@
 import sys
+sys.setrecursionlimit(1000000)
 
 n, s = map(int, input().split())
 arr = list(map(int, input().split()))
