@@ -1,6 +1,8 @@
 n, k = map(int, input().split())
 pictures = [0] * 10001
+
 maxSum = 0
+maxPoint = 1
 
 for _ in range(n) :
     info = input().split()
@@ -12,8 +14,10 @@ for _ in range(n) :
     elif alpha == 'H' :
         pictures[point] = 2
 
+    maxPoint = max(maxPoint, point)
 
-for i in range(1, k - n + 2) :
+
+for i in range(1, maxPoint - k) :
     temp = 0
     for j in range(i, i + k + 1) :
         temp += pictures[j]
