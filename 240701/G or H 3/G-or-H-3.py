@@ -17,7 +17,7 @@ for _ in range(n) :
     maxPoint = max(maxPoint, point)
 
 
-for i in range(1, maxPoint - k) :
+for i in range(maxPoint - k + 1) :
     temp = 0
     for j in range(i, i + k + 1) :
         temp += pictures[j]
