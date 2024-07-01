@@ -13,7 +13,7 @@ for _ in range(n) :
         pictures[point] = 2
 
 
-for i in range(1, k - n + 3) :
+for i in range(1, k - n + 1) :
     temp = 0
     for j in range(i, i + k + 1) :
         temp += pictures[j]
