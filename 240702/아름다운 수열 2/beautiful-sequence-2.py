@@ -10,9 +10,8 @@ for i in range(n - m + 1) :
             if arr[j] == subArr[k] :
                 cnt += 1
 
-        if cnt == m :
-            ans += 1
-            break
+    if cnt >= m :
+        ans += 1
 
 
 print(ans)
