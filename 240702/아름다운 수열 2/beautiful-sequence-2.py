@@ -5,7 +5,7 @@ ans = 0
 
 for i in range(n - m + 1) :
     cnt = 0
-    for j in range(i, m + 1) :
+    for j in range(i, i + m) :
         for k in range(m) :
             if arr[j] == subArr[k] :
                 cnt += 1
