@@ -9,6 +9,7 @@ for i in range(n - m + 1) :
         for k in range(m) :
             if arr[j] == subArr[k] :
                 cnt += 1
+                break
 
     if cnt >= m :
         ans += 1
