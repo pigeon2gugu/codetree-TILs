@@ -11,7 +11,7 @@ for i in range(n - m + 1) :
                 cnt += 1
                 break
 
-    if cnt >= m :
+    if cnt == m :
         ans += 1
 
 
