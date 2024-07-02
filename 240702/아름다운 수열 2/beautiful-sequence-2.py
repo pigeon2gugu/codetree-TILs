@@ -3,15 +3,10 @@ arr = list(map(int, input().split()))
 subArr = list(map(int, input().split()))
 ans = 0
 
-for i in range(n - m + 1) :
-    cnt = 0
-    for k in range(m) :
-        for j in range(i, i + m) :
-            if arr[j] == subArr[k] :
-                cnt += 1
-                break
+sortedSubArr = sorted(subArr)
 
-    if cnt == m :
+for i in range(n - m + 1) :
+    if sorted(arr[i:i+m]) == sortedSubArr:
         ans += 1
 
 
