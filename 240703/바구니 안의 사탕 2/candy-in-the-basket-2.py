@@ -1,5 +1,5 @@
 n, k = map(int, input().split())
-candies = [0] * (300)
+candies = [0] * (400)
 ans = 0
 
 for _ in range(n) :
