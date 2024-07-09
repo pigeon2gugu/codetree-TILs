@@ -1,5 +1,5 @@
 n = int(input())
-arr = ["n/a"] * 100
+arr = ["n/a"] * 101
 points = []
 
 for _ in range(n):
