@@ -4,7 +4,7 @@ arr2 = list(map(int, input().split()))
 ans = 0
 
 def isNear(a, b) :
-    if (abs(a - b) <= 2 or abs(a - b) >= 8) :
+    if (abs(a - b) <= 2 or abs(a - b) >= n - 2) :
         return True
     
     return False
