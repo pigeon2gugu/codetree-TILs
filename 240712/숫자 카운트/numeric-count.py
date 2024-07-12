@@ -10,8 +10,9 @@ for _ in range(n):
 for i in range(1, 10) :
     for j in range(1, 10) :
         for k in range(1, 10) :
-            number = i * 100 + j * 10 + k
-            numbers.append(str(number))
+            if i != j and i != k and j != k :
+                number = i * 100 + j * 10 + k
+                numbers.append(str(number))
 
 def calculateCounts(a, b):
     count1 = sum(1 for i in range(3) if a[i] == b[i])
