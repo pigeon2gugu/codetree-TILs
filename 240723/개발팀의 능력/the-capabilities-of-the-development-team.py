@@ -17,9 +17,9 @@ def getDiff(i, j, k, l) :
     return (maxPoint - minPoint)
 
 for i in range(n-1) :
-    for j in range(i, n) :
+    for j in range(i + 1, n) :
         for k in range(n-1) :
-            for l in range(k, n) :
+            for l in range(k + 1, n) :
                 if i == k or i == l or j == k or j == l :
                     continue
 
