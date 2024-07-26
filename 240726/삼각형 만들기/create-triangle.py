@@ -12,15 +12,29 @@ for i in range(n - 2) :
 
             if arr[i][0] == arr[j][0] :
                 y = abs(arr[i][1] - arr[j][1])
-                x = abs(arr[i][0] - arr[k][0])
+
+                if arr[i][1] == arr[k][1] :
+                    x = abs(arr[i][0] - arr[k][0])
+                elif arr[j][1] == arr[k][1] :
+                    x = abs(arr[j][0] - arr[k][0])
 
             elif arr[i][0] == arr[k][0] :
                 y = abs(arr[i][1] - arr[k][1])
-                x = abs(arr[i][0] - arr[j][0])
+
+                if arr[i][1] == arr[j][1] :
+                    x = abs(arr[i][0] - arr[j][0])
+                elif arr[k][1] == arr[j][1] :
+                    x = abs(arr[k][0] - arr[j][0])
+                
 
             elif arr[j][0] == arr[k][0] :
                 y = abs(arr[j][1] - arr[k][1])
-                x = abs(arr[i][0] - arr[k][0])
+
+                if arr[i][1] == arr[k][1] :
+                    x = abs(arr[i][0] - arr[k][0])
+                elif arr[i][1] == arr[j][1] :
+                    x = abs(arr[i][0] - arr[j][0])
+                
 
             else :
                 continue
