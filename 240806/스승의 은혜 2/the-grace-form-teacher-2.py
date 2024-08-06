@@ -5,15 +5,19 @@ ans = 0
 
 for i in range(n):
     tempSum = arr[i] / 2
-    cnt = 1
+    cnt = 0
 
+    if tempSum > b:
+        continue
+
+    cnt = 1
     for j in range(n):
         if i == j:
             continue
 
-        if tempSum > b:
-            break
-        
+        if tempSum + arr[j] > b :
+            continue
+
         cnt += 1
         tempSum += arr[j]
 
