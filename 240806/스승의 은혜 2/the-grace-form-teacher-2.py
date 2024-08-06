@@ -12,14 +12,14 @@ for i in range(n):
             continue
 
         if tempSum > b:
-            if cnt == 1 :
-                cnt = 0
-
             break
         
         cnt += 1
         tempSum += arr[j]
 
+    if tempSum > b :
+        cnt -= 1
+    
     ans = max(ans, cnt)
 
 print(ans)
