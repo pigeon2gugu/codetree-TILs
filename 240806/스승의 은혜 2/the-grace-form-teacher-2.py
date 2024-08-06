@@ -12,7 +12,6 @@ for i in range(n):
             continue
 
         if tempSum > b:
-            ans = max(ans, cnt)
             break
         
         cnt += 1
