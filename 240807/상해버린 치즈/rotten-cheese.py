@@ -20,11 +20,11 @@ for i in range(m) :
                 cnt += 1
 
     if cnt == s :
-        patientCnt = 0
+        patientCnt = [0] * (n + 1)
         for k in range(d) :
             if arr1[k][1] == i :
-                patientCnt += 1
+                patientCnt[arr1[k][0]] = 1
 
-        ans = max(ans, patientCnt)
+        ans = max(ans, sum(patientCnt))
 
 print(ans)
