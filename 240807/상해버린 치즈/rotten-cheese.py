@@ -19,7 +19,7 @@ for i in range(m) :
             if arr1[k][1] == i and arr1[k][0] == arr2[j][0] and arr1[k][2] < arr2[j][1] :
                 cnt += 1
 
-    if cnt == s :
+    if cnt >= s :
         patientCnt = [0] * (n + 1)
         for k in range(d) :
             if arr1[k][1] == i :
