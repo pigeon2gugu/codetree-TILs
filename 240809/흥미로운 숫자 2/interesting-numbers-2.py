@@ -3,9 +3,18 @@ ans = 0
 
 for i in range(x, y + 1) :
     cnt = 0
-    setStr = set(list(str(i)))
+    temp = [0] * 10
 
-    if len(setStr) == 2 :
+    for j in range(len(str(i))) :
+        temp[int(str(i)[j])] += 1
+
+    for j in range(len(temp)) :
+        if (temp[j]) == 1 :
+            cnt += 1
+
+    if cnt == 1 :
         ans += 1
+        
+
 
 print(ans)
